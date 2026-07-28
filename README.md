@@ -203,11 +203,11 @@ The base joint has two possible solutions:
 \begin{aligned}
 q_{1,a}
 &=
-\operatorname{atan2}(-P_y,-P_x),
+\mathrm{atan2}(-P_y,-P_x),
 \\
 q_{1,b}
 &=
-\operatorname{wrapToPi}(q_{1,a}+\pi).
+\mathrm{wrapToPi}(q_{1,a}+\pi).
 \end{aligned}
 ```
 
@@ -251,7 +251,7 @@ h
 \qquad
 \rho
 =
-\operatorname{atan2}(L_4,L_3).
+\mathrm{atan2}(L_4,L_3).
 ```
 
 The elbow-up and elbow-down solutions are:
@@ -260,14 +260,14 @@ The elbow-up and elbow-down solutions are:
 \begin{aligned}
 q_{3,a}
 &=
-\operatorname{wrapToPi}
+\mathrm{wrapToPi}
 \left(
 \rho+\cos^{-1}\left(\frac{D}{h}\right)
 \right),
 \\
 q_{3,b}
 &=
-\operatorname{wrapToPi}
+\mathrm{wrapToPi}
 \left(
 \rho-\cos^{-1}\left(\frac{D}{h}\right)
 \right).
@@ -317,9 +317,9 @@ The second joint angle is then:
 ```math
 q_2
 =
-\operatorname{wrapToPi}
+\mathrm{wrapToPi}
 \left(
-\operatorname{atan2}(c_1,c_2)
+\mathrm{atan2}(c_1,c_2)
 \right).
 ```
 
@@ -367,7 +367,7 @@ For $\sin q_5\neq 0$, the remaining wrist angles are:
 ```math
 q_4
 =
-\operatorname{atan2}
+\mathrm{atan2}
 \left(
 \frac{R_{23}}{\sin q_5},
 \frac{R_{13}}{\sin q_5}
@@ -377,7 +377,7 @@ q_4
 ```math
 q_6
 =
-\operatorname{atan2}
+\mathrm{atan2}
 \left(
 \frac{R_{32}}{\sin q_5},
 -\frac{R_{31}}{\sin q_5}
@@ -393,7 +393,7 @@ implementation selects:
 ```math
 q_4=0,
 \qquad
-q_6=\operatorname{atan2}(R_{21},R_{11}).
+q_6=\mathrm{atan2}(R_{21},R_{11}).
 ```
 
 ### 7. Select valid solutions
